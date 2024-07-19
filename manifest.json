@@ -20,12 +20,10 @@
   },
   "content_scripts": [
     {
-      "js": ["content.js"],
-      "matches": [
-        "https://leetcode.com/problems/*",
-        "https://developer.chrome.com/docs/extensions/*",
-        "https://developer.chrome.com/docs/webstore/*"
-      ]
+      "js": ["apis/leetcode.js", "content.js"],
+      "matches": ["https://leetcode.com/problems/*"]
     }
-  ]
+  ],
+  "permissions": ["activeTab", "cookies"],
+  "host_permissions": ["https://leetcode.com/problems/*"]
 }
